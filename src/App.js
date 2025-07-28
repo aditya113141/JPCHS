@@ -2,16 +2,16 @@ import React from 'react';
 import './App.css';
 import './index.css';
 
-import Header from './components/Header';
-import HeroSlider from './components/HeroSlider';
-import WhyJoinUs from './components/WhyJoinUs';
-import AdmissionForm from './components/AdmissionForm';
-import VideoSection from './components/VideoSection';
-import Courses from './components/Courses';
-import Campuses from './components/Campuses';
-import Testimonials from './components/Testimonial';
-import PlacementReviews from './components/PlacementReviews';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import HeroSlider from './components/HeroSlider/HeroSlider';
+import WhyJoinUs from './components/WhyJoinUs/WhyJoinUs';
+import AdmissionForm from './components/AdmissionForm/AdmissionForm';
+import VideoSection from './components/VideoSection/VideoSection';
+import Courses from './components/Courses/Courses';
+import Campuses from './components/Campuses/Campuses';
+import Testimonials from './components/Testimonial/Testimonial';
+import PlacementReviews from './components/PlacementReviews/PlacementReviews';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const incredibleLifeVideos = [
