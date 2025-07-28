@@ -1,0 +1,96 @@
+/* src/components/Footer.css (Corrected) */
+.site-footer {
+    /* Corrected dark purplish-blue background */
+    background-color: #212142; 
+    /* Corrected light lavender text color */
+    color: #d0d0e0; 
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; /* Adjusted for a lighter font appearance */
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    gap: 50px;
+    align-items: start; /* Aligns columns to the top */
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-column p {
+    margin: 0 0 12px 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+/* Re-added the ::before pseudo-element for the bullet points */
+.footer-column ul a {
+    color: #d0d0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: capitalize;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul a::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #4a55a0; /* Blue color for the bullet */
+    border-radius: 50%; /* Makes it a circle */
+    margin-right: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: #fff;
+}
+
+.footer-column ul a:hover::before {
+    background-color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Using nth-child for cleaner CSS instead of inline styles */
+.social-icon:nth-child(1) { background-color: #1e1e1e; }
+.social-icon:nth-child(2) { background-color: #3b5998; }
+.social-icon:nth-child(3) { background-color: #0077b5; }
+.social-icon:nth-child(4) { background-color: #db4437; }
+.social-icon:nth-child(5) { background-color: #c4302b; }

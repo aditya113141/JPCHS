@@ -1,0 +1,56 @@
+/* src/components/PlacementReviews.css (Corrected) */
+.placement-reviews-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.reviewers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Adjusted gap to match the image */
+    row-gap: 35px;
+    column-gap: 80px; 
+}
+
+.reviewer-item {
+    /* This is the key fix: using flexbox to align items horizontally */
+    display: flex;
+    align-items: center; /* This vertically centers the text block with the image */
+    gap: 20px; /* Creates space between the image and the text */
+}
+
+.reviewer-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Removed margin since gap is used now */
+    border: 3px solid #eee;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.reviewer-details {
+    /* This block contains the text, it will now be to the right of the image */
+    text-align: left; /* Ensures text inside is left-aligned */
+}
+
+.reviewer-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 2px 0;
+    font-size: 15px;
+}
+
+.reviewer-role {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #777;
+    margin: 0 0 8px 0; /* Increased bottom margin for more space */
+}
+
+.star-rating span {
+    color: #ffc107;
+    font-size: 16px;
+    letter-spacing: 3px; /* Added letter-spacing to match the image */
+}

@@ -1,0 +1,52 @@
+.campus-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+.campus-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.campus-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.campus-grid.second-row {
+  grid-template-columns: 1fr 1.5fr 2fr;
+}
+.campus-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 350px;
+}
+.campus-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.campus-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2979ff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  border: none;
+}
+.campus-button:hover {
+  background-color: #1c64d6;
+}
