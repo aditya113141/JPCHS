@@ -1,0 +1,179 @@
+/* src/components/CoursesPage/CoursesPage.css (Corrected) */
+
+/* --- Hero Section --- */
+.courses-hero-new {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1600x400/777/ccc?text=Banner');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.courses-hero-new h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* --- Specializing Section --- */
+.specializing-section {
+    padding: 80px 20px;
+}
+.specializing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.specializing-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #d32f2f; /* Red color */
+    margin-bottom: 20px;
+}
+.specializing-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+.specializing-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* --- Courses Offered Section with Parallax --- */
+.courses-offered-parallax {
+    padding: 100px 0;
+    /* This is the key for the parallax effect */
+    background-image: linear-gradient(rgba(23, 52, 115, 0.85), rgba(23, 52, 115, 0.85)), url('https://placehold.co/1600x800/ccc/777?text=Background');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.courses-offered-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.courses-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* Lines beside the subtitle */
+.courses-subtitle::before, .courses-subtitle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+}
+.courses-subtitle::before { right: 100%; margin-right: 15px; }
+.courses-subtitle::after { left: 100%; margin-left: 15px; }
+
+.courses-title-main {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.courses-offered-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.course-offer-card {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-offer-card:hover {
+    transform: translateY(-10px); /* The pop-up effect */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.course-offer-image {
+    width: 40%;
+    object-fit: cover;
+}
+.course-offer-text {
+    padding: 30px;
+}
+.course-offer-text h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.course-offer-text p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* --- Placements Section --- */
+.placements-section-courses {
+    padding: 80px 20px;
+    text-align: center;
+}
+.section-title.red {
+    color: #d32f2f;
+}
+.placements-subtitle {
+    max-width: 600px;
+    margin: -10px auto 50px;
+    color: #555;
+    font-style: italic;
+}
+.placements-grid-courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.placement-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.placement-card h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+.placement-card p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- CTA Section --- */
+.courses-cta-new {
+    background-color: #d32f2f;
+    padding: 40px 20px;
+    text-align: center;
+}
+.cta-button-new {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.cta-button-new:hover {
+    background-color: #fff;
+    color: #d32f2f;
+}

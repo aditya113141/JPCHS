@@ -1,0 +1,53 @@
+.stats-banner {
+    position: relative;
+    padding: 100px 0;
+    background-image: url('https://placehold.co/1600x400/555/ccc?text=Cityscape');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+}
+.stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 58, 138, 0.8);
+}
+.stats-content {
+    position: relative;
+    z-index: 1;
+}
+.stats-content p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.stat-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.stat-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.stat-number {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.stat-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

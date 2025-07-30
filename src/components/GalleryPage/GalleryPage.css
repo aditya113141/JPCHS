@@ -1,0 +1,229 @@
+
+/* src/components/GalleryPage/GalleryPage.css */
+.gallery-page {
+    background-color: #fff;
+}
+
+/* --- Hero Section --- */
+.gallery-hero {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1600x400/777/ccc?text=Gallery+Banner');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.gallery-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+/* --- Why Reyansh Section --- */
+.why-reyansh-section {
+    padding: 80px 20px;
+}
+.why-reyansh-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.why-reyansh-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+.why-reyansh-text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+.why-reyansh-text li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+.why-reyansh-text li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #d32f2f;
+    font-weight: bold;
+}
+.cta-button-red {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.cta-button-red:hover {
+    background-color: #b71c1c;
+}
+.why-reyansh-image-wrapper {
+    position: relative;
+}
+.why-reyansh-image-wrapper .image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.why-reyansh-image-wrapper .image-container::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #d32f2f;
+    border-radius: 8px;
+    z-index: -1;
+}
+.why-reyansh-image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+/* --- Shared Section Titles --- */
+.section-pre-title {
+    text-align: center;
+    color: #d32f2f;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.section-title-large {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #555;
+    line-height: 1.7;
+}
+.section-title-center {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+/* --- Image Grids --- */
+.image-grid-nine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.image-grid-nine img, .image-grid-training img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.image-grid-nine img:hover, .image-grid-training img:hover {
+    transform: scale(1.05);
+}
+.training-section {
+    padding: 80px 20px;
+}
+.image-grid-training {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* --- Our Team Section --- */
+.our-team-section {
+    padding: 80px 20px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.team-card {
+    text-align: center;
+}
+.team-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.team-card h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.team-card p {
+    color: #777;
+}
+.cta-button-red.centered {
+    display: table;
+    margin: 0 auto;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-gallery-section {
+    padding: 80px 20px;
+}
+.testimonials-grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.testimonial-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.testimonial-item img {
+    width: 100%;
+    display: block;
+}
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- Final CTA Section --- */
+.final-cta-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f9fa; /* Very light background */
+    background-image: url('https://www.transparenttextures.com/patterns/light-sketch.png'); /* Subtle texture */
+}
+.final-cta-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.final-cta-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}

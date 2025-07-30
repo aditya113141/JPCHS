@@ -28,12 +28,21 @@ const Footer = () => {
                 <div className="footer-column">
                     <h4>SOCIAL MEDIA</h4>
                     <div className="social-links">
-                        {/* Corrected icons and colors to match the image exactly */}
-                        <a href="#" className="social-icon" style={{backgroundColor: '#1e1e1e'}}><i className="fab fa-instagram"></i></a>
-                        <a href="#" className="social-icon" style={{backgroundColor: '#3b5998'}}><i className="fab fa-facebook-f"></i></a>
-                        <a href="#" className="social-icon" style={{backgroundColor: '#0077b5'}}><i className="fab fa-linkedin-in"></i></a>
-                        <a href="#" className="social-icon" style={{backgroundColor: '#db4437'}}><i className="fas fa-envelope"></i></a>
-                        <a href="#" className="social-icon" style={{backgroundColor: '#c4302b'}}><i className="fab fa-youtube"></i></a>
+                        <a href="#" className="social-icon instagram" aria-label="Instagram">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" className="social-icon facebook" aria-label="Facebook">
+                            <i className="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" className="social-icon linkedin" aria-label="LinkedIn">
+                            <i className="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" className="social-icon email" aria-label="Email">
+                            <i className="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" className="social-icon youtube" aria-label="YouTube">
+                            <i className="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
