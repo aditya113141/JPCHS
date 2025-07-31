@@ -63,7 +63,7 @@ const AboutUs = () => {
       <StatsBanner />
       <CollegeFacilities />
       <GetInTouch />
-      <ExpertTeam />
+      <ExpertTeam type ="about"/>
       <CompaniesBanner />
     </div>
   );

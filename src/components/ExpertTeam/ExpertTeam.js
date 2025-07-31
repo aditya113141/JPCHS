@@ -1,7 +1,9 @@
+// src/components/ExpertTeam/ExpertTeam.js (Final Version)
 import React from 'react';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import './ExpertTeam.css';
 
+// This is a reusable animation wrapper
 const AnimatedElement = ({ children, animation, delay }) => {
     const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
     return (
@@ -11,46 +13,64 @@ const AnimatedElement = ({ children, animation, delay }) => {
     );
 };
 
-const TeamMemberCard = ({ image, name, title, delay }) => (
-    <AnimatedElement animation="fade-in-up" delay={delay}>
-        <div className="team-member-card">
-            <img src={image} alt={name} />
-            <div className="member-info">
-                <h5>{name}</h5>
-                <p>{title}</p>
-            </div>
+// The card component is now more flexible
+const TeamMemberCard = ({ member, type }) => (
+    <div className="team-card">
+        <div className="team-image-container">
+            <img src={member.img} alt={member.name} />
         </div>
-    </AnimatedElement>
+        <div className="team-info">
+            <h5>{member.name}</h5>
+            <p className="team-title">{member.title}</p>
+            {/* This part will only show on the About Us page */}
+            {type === 'about' && (
+                <>
+                    <hr />
+                    <p className="team-contact">CONTACT:-</p>
+                    <p className="team-contact">{member.contact1}</p>
+                    <p className="team-contact">{member.contact2}</p>
+                </>
+            )}
+        </div>
+    </div>
 );
 
-const ExpertTeam = () => {
+// The main component now accepts a "type" prop
+const ExpertTeam = ({ type = 'contact' }) => { // 'contact' is the default
+    const aboutTeam = [
+        { img: 'https://placehold.co/400x400/EFEFEF/333?text=G.Mahender', name: 'G.MAHENDER', title: '', contact1: '74163 87602', contact2: '74163 87603' },
+        { img: 'https://placehold.co/400x400/EFEFEF/333?text=G.Srivani', name: 'G.SRIVANI', title: '', contact1: '74163 87602', contact2: '74163 87603' },
+        { img: 'https://placehold.co/400x400/EFEFEF/333?text=Fabien+Mailly', name: 'Fabien Mailly', title: '', contact1: '74163 87602', contact2: '74163 87603' },
+    ];
+
+    const contactTeam = [
+        { img: 'https://placehold.co/400x400/EFEFEF/333?text=G.Mahender', name: 'G.MAHENDER', title: 'Principal' },
+        { img: 'https://placehold.co/400x400/EFEFEF/333?text=G.Srivani', name: 'G.SRIVANI', title: 'Director' },
+        { img: 'https://placehold.co/400x400/EFEFEF/333?text=Anupa+Jagan', name: 'Anupa Jagan', title: 'Operation Manager' },
+    ];
+    
+    const teamData = type === 'about' ? aboutTeam : contactTeam;
+    const sectionClassName = type === 'about' ? 'expert-team-section-about' : 'expert-team-section-contact';
+
     return (
-        <section className="expert-team-section">
+        <section className={sectionClassName}>
             <div className="container">
-                <h2 className="section-title">Contact Our Expert Team</h2>
+                <AnimatedElement animation="fade-in-up">
+                    <h2 className="section-title red decorative">Our Expert Team</h2>
+                    <p className="expert-team-intro">
+                        NOW A DAYS SOME PEOPLE ARE VERY INTERESTED IN HOTEL MANAGEMENT, BUT THEY ARE NOT GETTING RIGHT SOLUTION TO FIND PERFECT INSTITUTION...
+                    </p>
+                </AnimatedElement>
                 <div className="team-grid">
-                    <TeamMemberCard 
-                        image="https://placehold.co/400x400/EFEFEF/333?text=Gaddam" 
-                        name="Gaddam Mahendhar" 
-                        title="Founder"
-                        delay="0s"
-                    />
-                    <TeamMemberCard 
-                        image="https://placehold.co/400x400/EFEFEF/333?text=Sushma" 
-                        name="Sushma" 
-                        title="Co-Founder"
-                        delay="0.2s"
-                    />
-                    <TeamMemberCard 
-                        image="https://placehold.co/400x400/EFEFEF/333?text=Vaishali" 
-                        name="Vaishali" 
-                        title="Marketing Head"
-                        delay="0.4s"
-                    />
+                    {teamData.map((member, index) => (
+                         <AnimatedElement key={index} animation="fade-in-up" delay={`${index * 0.1}s`}>
+                            <TeamMemberCard member={member} type={type} />
+                        </AnimatedElement>
+                    ))}
                 </div>
             </div>
         </section>
     );
 };
 
-export default ExpertTeam; // <-- Make sure this line exists
+export default ExpertTeam;
