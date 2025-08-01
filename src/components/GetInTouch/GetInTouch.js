@@ -1,4 +1,4 @@
-// src/components/GetInTouch/GetInTouch.js (Functional)
+// src/components/GetInTouch/GetInTouch.js (Corrected & Complete)
 import React, { useState } from 'react';
 import './GetInTouch.css';
 
@@ -12,7 +12,7 @@ const GetInTouch = () => {
         message: '',
     });
 
-    // State to manage submission status (e.g., "Submitting...", "Success!", "Error!")
+    // State to manage submission status
     const [status, setStatus] = useState('');
 
     // Handle input changes
@@ -40,13 +40,8 @@ const GetInTouch = () => {
 
             if (response.ok) {
                 setStatus('Message sent successfully!');
-                // Clear the form after successful submission
                 setFormData({
-                    firstName: '',
-                    lastName: '',
-                    email: '',
-                    number: '',
-                    message: '',
+                    firstName: '', lastName: '', email: '', number: '', message: '',
                 });
             } else {
                 setStatus('Failed to send message. Please try again.');
@@ -63,7 +58,37 @@ const GetInTouch = () => {
                 <div className="contact-info">
                     <p className="contact-pre-title">[ CONTACT US ]</p>
                     <h3 className="contact-heading">Let's Get in Touch</h3>
-                    {/* ... (info items remain the same) ... */}
+                    
+                    {/* --- THIS IS THE PART THAT WAS MISSING --- */}
+                    <div className="info-item">
+                        <div className="info-icon">
+                           <i className="fas fa-envelope"></i>
+                        </div>
+                        <div className="info-text">
+                            <h5>Email</h5>
+                            <p>rchm.nzb@gmail.com</p>
+                        </div>
+                    </div>
+                    <div className="info-item">
+                        <div className="info-icon">
+                           <i className="fas fa-phone-alt"></i>
+                        </div>
+                        <div className="info-text">
+                            <h5>Call Us</h5>
+                            <p>+91 7416387602</p>
+                        </div>
+                    </div>
+                    <div className="info-item">
+                        <div className="info-icon">
+                           <i className="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div className="info-text">
+                            <h5>Address</h5>
+                            <p>E-17a,Umarani Complex, Opp-Tata Jasper Industries,Borgaon(p),Nizambad,503230</p>
+                        </div>
+                    </div>
+                     {/* --- END OF MISSING PART --- */}
+
                 </div>
                 <div className="contact-form">
                     <h4 className="form-heading">SEND MESSAGE</h4>
@@ -78,7 +103,6 @@ const GetInTouch = () => {
                         <button type="submit" disabled={status === 'Submitting...'}>
                             {status === 'Submitting...' ? 'Sending...' : 'Send Message'}
                         </button>
-                        {/* Display status message */}
                         {status && <p className="form-status">{status}</p>}
                     </form>
                 </div>
