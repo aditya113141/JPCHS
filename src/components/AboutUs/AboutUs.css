@@ -51,3 +51,49 @@
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+/* --- Responsive Styles for Tablets and Mobile --- */
+
+/* This applies to screens 992px wide or smaller (tablets) */
+@media (max-width: 992px) {
+    .about-intro-grid {
+        gap: 30px; /* Reduce the space between columns */
+    }
+
+    .about-hero h1 {
+        font-size: 3rem; /* Make the main title smaller */
+    }
+
+    .about-intro-text .red-title {
+        font-size: 1.8rem; /* Make section titles smaller */
+    }
+}
+
+/* This applies to screens 768px wide or smaller (mobile phones) */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem; /* Make the main title even smaller */
+    }
+
+    .about-hero p {
+        font-size: 1rem; /* Make the subtitle smaller */
+        padding: 0 10px;
+    }
+
+    .about-intro-section {
+        padding: 60px 20px; /* Reduce the top/bottom padding */
+    }
+
+    .about-intro-grid {
+        /* This is the key change: stack the items in a single column */
+        grid-template-columns: 1fr;
+    }
+
+    /* This resets the order on mobile so the image is always below the text */
+    .about-intro-grid.reverse .about-intro-text {
+        order: initial;
+    }
+
+    .about-intro-grid.reverse .about-intro-image {
+        order: initial;
+    }
+}

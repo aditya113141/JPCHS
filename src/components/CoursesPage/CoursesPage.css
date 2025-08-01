@@ -177,3 +177,13 @@
     background-color: #fff;
     color: #d32f2f;
 }
+/* Responsivesness ----- */
+@media (max-width: 992px) {
+    .courses-offered-grid { grid-template-columns: 1fr; }
+    .placements-grid-courses { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .specializing-grid { grid-template-columns: 1fr; }
+    .course-offer-card { flex-direction: column; }
+    .course-offer-image { width: 100%; height: 200px; }
+}
