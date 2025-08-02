@@ -1,56 +1,79 @@
-/* src/components/PlacementReviews.css (Corrected) */
+/* src/components/PlacementReviews.css */
 .placement-reviews-section {
-    padding: 80px 0;
-    background-color: #fff;
+  padding: 80px 0;
+  background-color: #fefefe;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2979ff;
+  margin-bottom: 10px;
+}
+
+.placement-subtitle {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 50px;
 }
 
 .reviewers-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Adjusted gap to match the image */
-    row-gap: 35px;
-    column-gap: 80px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px 50px;
 }
 
 .reviewer-item {
-    /* This is the key fix: using flexbox to align items horizontally */
-    display: flex;
-    align-items: center; /* This vertically centers the text block with the image */
-    gap: 20px; /* Creates space between the image and the text */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.reviewer-item:hover {
+  transform: translateY(-5px);
 }
 
 .reviewer-image {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    /* Removed margin since gap is used now */
-    border: 3px solid #eee;
-    flex-shrink: 0; /* Prevents the image from shrinking */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  flex-shrink: 0;
 }
 
 .reviewer-details {
-    /* This block contains the text, it will now be to the right of the image */
-    text-align: left; /* Ensures text inside is left-aligned */
+  text-align: left;
 }
 
 .reviewer-name {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #333;
-    margin: 0 0 2px 0;
-    font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin: 0 0 5px 0;
+  font-size: 15px;
 }
 
 .reviewer-role {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: #777;
-    margin: 0 0 8px 0; /* Increased bottom margin for more space */
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #E4994A;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .star-rating span {
-    color: #ffc107;
-    font-size: 16px;
-    letter-spacing: 3px; /* Added letter-spacing to match the image */
+  color: #ffc107;
+  font-size: 16px;
+  letter-spacing: 2px;
 }

@@ -35,7 +35,7 @@ const Home = () => {
             
             {/* Corrected to a self-closing tag */}
             <VideoSection 
-                title="Incredible Life at Reyansh" 
+                title="Incredible Life at JPCHS" 
                 videos={incredibleLifeVideos} 
                 columns={3}
             />

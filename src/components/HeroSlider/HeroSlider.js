@@ -6,24 +6,24 @@ const HeroSlider = () => {
     <section className="hero-slider">
       <div className="slider-wrapper">
         <div className="slide">
-          <img src="https://placehold.co/1600x800/eee/333?text=Banner+Image+1" alt="Banner 1" />
+          <img src="https://placehold.co/1600x800/eee/333?text=JPCHS+Campus+Life" alt="JPCHS Banner 1" />
           <div className="slide-caption">
-            <h1>Reyansh college of Hotel managements</h1>
-            <p>Student's role play Of welcoming a guest to the hotel as a part of front office</p>
+            <h1>Jai Prakash College Of Health Science</h1>
+            <p>Students actively participating in clinical simulations and patient care training.</p>
           </div>
         </div>
         <div className="slide">
-          <img src="https://placehold.co/1600x800/ddd/333?text=Banner+Image+2" alt="Banner 2" />
+          <img src="https://placehold.co/1600x800/ddd/333?text=World+Class+Labs" alt="JPCHS Banner 2" />
           <div className="slide-caption">
-            <h1>World-Class Training Facilities</h1>
-            <p>Experience learning in a real-world hotel environment.</p>
+            <h1>Advanced Medical Laboratories</h1>
+            <p>Hands-on learning with modern diagnostic equipment and labs.</p>
           </div>
         </div>
         <div className="slide">
-          <img src="https://placehold.co/1600x800/ccc/333?text=Banner+Image+3" alt="Banner 3" />
+          <img src="https://placehold.co/1600x800/ccc/333?text=Placement+Support" alt="JPCHS Banner 3" />
           <div className="slide-caption">
-            <h1>Guaranteed Placements</h1>
-            <p>Your career in hospitality starts here with a 100% placement guarantee.</p>
+            <h1>Assured Healthcare Placements</h1>
+            <p>Begin your journey in the medical field with our 100% placement assistance.</p>
           </div>
         </div>
       </div>

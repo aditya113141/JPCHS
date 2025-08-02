@@ -1,9 +1,8 @@
-// src/components/CoursesPage/CoursesPage.js (Corrected)
+// src/components/CoursesPage/CoursesPage.js  
 import React from 'react';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import './CoursesPage.css';
 
-// Reusable animation wrapper
 const AnimatedElement = ({ children, animation, delay = '0s' }) => {
     const [ref, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
     return (
@@ -15,54 +14,43 @@ const AnimatedElement = ({ children, animation, delay = '0s' }) => {
 
 const CoursesPage = () => {
     const courses = [
-        { img: 'https://placehold.co/400x300/EAD9FF/333?text=Diploma', title: 'DIPLOMA', description: 'hotel management success with our dynamic diploma program, equipping you with essential skills for thriving in the hospitality industry.' },
-        { img: 'https://placehold.co/400x300/D9F1FF/333?text=Adv+Diploma', title: 'ADVANCE DIPLOMA', description: 'Master hotel operations and guest services with our specialized diploma program. Launch your career in hotel management diploma.' },
-        { img: 'https://placehold.co/400x300/FFEAD9/333?text=PG+Diploma', title: 'PG DIPLOMA', description: 'Unlock executive opportunities in Golf Countries with our comprehensive PG Diploma in Hotel Management.' },
-        { img: 'https://placehold.co/400x300/D9FFDB/333?text=Bartending', title: 'DIPLOMA BARTENDING', description: 'Enroll In Our Diploma In Bartending Program Today. Raise The Bar On Your Career Prospects With Our Accredited Diploma In Bartending.' },
+        { img: 'https://placehold.co/400x300/EAD9FF/333?text=Diploma', title: 'DIPLOMA IN MEDICAL LAB TECHNOLOGY', description: 'Gain hands-on skills in laboratory techniques, diagnostics, and analysis essential to support the healthcare system.' },
+        { img: 'https://placehold.co/400x300/D9F1FF/333?text=Adv+Diploma', title: 'DIPLOMA IN OPERATION THEATER TECHNOLOGY', description: 'Train to assist during surgeries with in-depth knowledge of sterilization, surgical instruments, and OT procedures.' },
+        { img: 'https://placehold.co/400x300/FFEAD9/333?text=PG+Diploma', title: 'DIPLOMA IN RADIOLOGY & IMAGING TECHNOLOGY', description: 'Master radiographic techniques and medical imaging for diagnostic and therapeutic purposes.' },
+        { img: 'https://placehold.co/400x300/D9FFDB/333?text=Pharmacy', title: 'DIPLOMA IN PHARMACY', description: 'Explore pharmaceutical sciences and prepare for a rewarding career in the drug and healthcare industry.' },
     ];
 
     const placements = [
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Suresh', name: 'Suresh Kumar', role: 'Marriott Resorts Maldives' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Raviteja', name: 'Raviteja', role: 'Housekeeping' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Rantna', name: 'Rantna Kumar', role: 'Park Regis UAE' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Ravindher', name: 'Ravindher Dhumala', role: 'Aquamarine Hotel & Resort Kuwait' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Ravi', name: 'Ravi Bussa', role: 'Safari Fintas Hotels Kuwait' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Mutha', name: 'Mutha Rahul', role: 'Embassy Suites by Hilton' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Lokesh', name: 'Lokesh Gaddam', role: 'Honduhali Island Maldives' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Limbadri', name: 'Limbadri Vadalkonda', role: 'Waiter Cyprus' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Manohar', name: 'Manohar', role: 'Rotana Hotel Kuwait' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Madhan', name: 'Madhan Kodu', role: 'Bartender Maldives' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Riya', name: 'Riya Abdul', role: 'Pool Attendant Abu Dhabi' },
-        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Madhukar', name: 'Madhukar Reddy', role: 'Castello Hotel Bartender' },
+        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Priya', name: 'Priya Sharma', role: 'Lab Technician at Apollo Hospitals' },
+        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Rohit', name: 'Rohit Patel', role: 'X-ray Technician at Sterling Hospital' },
+        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Neha', name: 'Neha Verma', role: 'Pharmacy Assistant at Zydus Cadila' },
+        { img: 'https://placehold.co/200x250/EFEFEF/333?text=Arjun', name: 'Arjun Singh', role: 'OT Technician at Shalby Hospitals' },
     ];
 
     return (
         <div className="courses-page">
-            {/* Section 1: Hero */}
             <section className="courses-hero-new">
                 <AnimatedElement animation="fade-in">
-                    <h1>INTERNATIONAL JOBS OPPORTUNITIES</h1>
+                    <h1>CAREERS IN HEALTH SCIENCE</h1>
                 </AnimatedElement>
             </section>
 
-            {/* Section 2: Specializing */}
             <section className="specializing-section container">
                 <div className="specializing-grid">
                     <AnimatedElement animation="fade-in-up" className="specializing-text">
-                        <h2>Specializing in Hotel Management at Reyansh College</h2>
-                        <p>At Reyansh College of Hotel Management, our specialty lies in providing comprehensive education and training in the field of hotel management. With a focus on excellence, innovation, and industry relevance, we prepare our students to excel in the dynamic and competitive hospitality industry.</p>
+                        <h2>Healthcare Career Foundation at JPCHS</h2>
+                        <p>At Jai Prakash College of Health Science (JPCHS), we specialize in offering hands-on, industry-relevant healthcare training to help students launch careers in diagnostics, imaging, surgery assistance, and pharmacy. Our courses are designed with practical application and global healthcare standards in mind.</p>
                     </AnimatedElement>
                     <AnimatedElement animation="slide-in-right" className="specializing-image">
-                        <img src="https://placehold.co/600x400/DDD/333?text=College" alt="Reyansh College Building" />
+                        <img src="https://placehold.co/600x400/DDD/333?text=JPCHS+Campus" alt="JPCHS College Building" />
                     </AnimatedElement>
                 </div>
             </section>
-            
-            {/* Section 3: Courses Offered with Parallax Background */}
+
             <section className="courses-offered-parallax">
                 <div className="courses-offered-content container">
                     <AnimatedElement animation="fade-in-up">
-                        <h3 className="courses-subtitle">RCHM</h3>
+                        <h3 className="courses-subtitle">JPCHS</h3>
                         <h2 className="courses-title-main">COURSES OFFERED</h2>
                     </AnimatedElement>
                     <div className="courses-offered-grid">
@@ -80,12 +68,11 @@ const CoursesPage = () => {
                     </div>
                 </div>
             </section>
-            
-            {/* Section 4: Placements */}
+
             <section className="placements-section-courses container">
                  <AnimatedElement animation="fade-in-up">
                     <h2 className="section-title red">PLACEMENTS</h2>
-                    <p className="placements-subtitle">"Students Who Have Successfully Landed Job Placements Following Their Training At Our College."</p>
+                    <p className="placements-subtitle">Our graduates are placed in leading hospitals and labs across India, proving the strength of our practical training approach.</p>
                     <div className="placements-grid-courses">
                         {placements.map((person, index) => (
                             <div key={index} className="placement-card">
@@ -98,11 +85,10 @@ const CoursesPage = () => {
                 </AnimatedElement>
             </section>
 
-            {/* Section 5: CTA */}
             <section className="courses-cta-new">
                 <div className="container">
                     <AnimatedElement animation="fade-in-up">
-                        <a href="#" className="cta-button-new">Whatsapp Us For More</a>
+                        <a href="#" className="cta-button-new">Contact Us on WhatsApp</a>
                     </AnimatedElement>
                 </div>
             </section>

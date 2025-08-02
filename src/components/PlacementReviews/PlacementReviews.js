@@ -3,49 +3,47 @@ import React from 'react';
 import './PlacementReviews.css';
 
 const StarRating = () => (
-    <div className="star-rating">
-        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-    </div>
+  <div className="star-rating">
+    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+  </div>
 );
 
 const Reviewer = ({ image, name, role }) => (
-    <div className="reviewer-item">
-        <img src={image} alt={name} className="reviewer-image" />
-        <div className="reviewer-details">
-            <p className="reviewer-name">{name}</p>
-            <p className="reviewer-role">{role}</p>
-            <StarRating />
-        </div>
+  <div className="reviewer-item">
+    <img src={image} alt={name} className="reviewer-image" />
+    <div className="reviewer-details">
+      <p className="reviewer-name">{name}</p>
+      <p className="reviewer-role">{role || 'Placed Student'}</p>
+      <StarRating />
     </div>
+  </div>
 );
 
 const PlacementReviews = () => {
-    const reviewers = [
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'MADHAN KODU', role: 'Bartender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Riya Abdul', role: 'Pool Attender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Mallikarjuna', role: 'Bartender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Raviteja', role: 'House Keeping' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Mutha Rahul', role: 'Bartender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Madhukar', role: 'Bartender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Nagarjuna', role: 'Bartender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Dinesh', role: 'Bartender' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Rantna Kumar', role: 'Park Regis Uae' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Manohar', role: 'Rotana Hotel Kuwait' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Ravindher Dhumala', role: 'Resort kuwait' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Lokesh Gaddam', role: '' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Limbadri Vadalkonda', role: 'Waiter Cyprus' },
-        { image: 'https://placehold.co/70x70/EFEFEF/333?text=Man', name: 'Ravi Bussa', role: 'Safari Hotels Kuwait (KST)' },
-    ];
-    return (
-        <section className="placement-reviews-section">
-            <div className="container">
-                <h2 className="section-title">OUR PLACEMENT TEAM REVIEWS</h2>
-                <div className="reviewers-grid">
-                    {reviewers.map(r => <Reviewer key={r.name} {...r} />)}
-                </div>
-            </div>
-        </section>
-    );
+  const reviewers = [
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=AV', name: 'Anjali Verma', role: 'GNM Nurse – Apollo Hospital' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=PS', name: 'Pankaj Sharma', role: 'Lab Technician – Surat' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=NR', name: 'Neha Reddy', role: 'ANM Nurse – Qatar' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=RD', name: 'Ravi Deshmukh', role: 'OT Technician – Ahmedabad' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=KM', name: 'Kiran Mehta', role: 'Pharmacy Assistant – Max Healthcare' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=BK', name: 'Bhavna Kumari', role: 'Radiology Assistant – Kuwait Hospital' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=SS', name: 'Sunil Sharma', role: 'OT Technician – Cygnus Hospital' },
+    { image: 'https://placehold.co/70x70/EFEFEF/333?text=RJ', name: 'Ritika Joshi', role: 'GNM Nurse – Dubai' },
+  ];
+
+  return (
+    <section className="placement-reviews-section">
+      <div className="container">
+        <h2 className="section-title">Our Placement Stars</h2>
+        <p className="placement-subtitle">Students of JPCHS shining across India & Abroad</p>
+        <div className="reviewers-grid">
+          {reviewers.map((r) => (
+            <Reviewer key={r.name} {...r} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default PlacementReviews;

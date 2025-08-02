@@ -16,18 +16,41 @@ const TestimonialCard = ({ text, name, role, image }) => (
 
 const Testimonials = () => {
   const reviews = [
-    { text: "Thanks to Reyansh College of Hotel Management, I landed a great job in Qatar! Their teachers and hands-on training prepared me perfectly for the hospitality industry. I'm so grateful for their support and guidance.", name: 'Vinay Vempally', role: 'BARTENDER', image: 'https://placehold.co/60x60/222/fff?text=VV' },
-    { text: "Thanks to the support and training from Reyansh College of Hotel Management. Their hands-on approach and industry-focused education have prepared me well for this role. I owe it all to Reyansh College!", name: 'Rajesh kumar', role: 'POOL ATTENDER', image: 'https://placehold.co/60x60/444/fff?text=RK' },
-    { text: "Reyansh College of Hotel Management, I've secured a rewarding housekeeping position. Their training and expert guidance have equipped me with the skills and knowledge necessary to excel in the hotel management industry.", name: 'Ravi Teja', role: 'HOUSE KEEPING', image: 'https://placehold.co/60x60/666/fff?text=RT' },
-    { text: "Thanks to Reyansh College of Hotel Management, I'm grateful for their support and proud to represent Reyansh College in the thriving hospitality scene of Dubai!", name: 'Dinesh kumar', role: 'BARTENDER', image: 'https://placehold.co/60x60/888/fff?text=DK' },
+    {
+      text: "JPCHS helped me become a certified nurse. Today I work in a reputed hospital in Bangalore and support my family proudly.",
+      name: 'Anjali Verma',
+      role: 'GNM Nurse',
+      image: 'https://placehold.co/60x60/222/fff?text=AV',
+    },
+    {
+      text: "I had only completed 10th but JPCHS gave me the opportunity to become a lab technician. I'm now working in a diagnostic center in Gujarat.",
+      name: 'Pankaj Sharma',
+      role: 'DMLT Technician',
+      image: 'https://placehold.co/60x60/444/fff?text=PS',
+    },
+    {
+      text: "The training at JPCHS is very practical. With their support, I got placed in a hospital abroad. Thank you JPCHS!",
+      name: 'Neha Reddy',
+      role: 'ANM Nurse',
+      image: 'https://placehold.co/60x60/666/fff?text=NR',
+    },
+    {
+      text: "I joined JPCHS with no prior experience. Now, I work as an OT technician in a leading private hospital in Ahmedabad.",
+      name: 'Ravi Deshmukh',
+      role: 'OT Technician',
+      image: 'https://placehold.co/60x60/888/fff?text=RD',
+    },
   ];
+
   return (
     <section className="testimonials-section">
       <div className="container">
-        <h2 className="section-title">What People Say</h2>
-        <h3 className="section-subtitle">ABOUT "REYANSH COLLEGE OF HOTEL MANAGEMENT"</h3>
+        <h2 className="section-title">What Our Students Say</h2>
+        <h3 className="section-subtitle">ABOUT JAI PRAKASH COLLEGE OF HEALTH SCIENCE</h3>
         <div className="testimonials-grid">
-          {reviews.map(review => <TestimonialCard key={review.name} {...review} />)}
+          {reviews.map((review) => (
+            <TestimonialCard key={review.name} {...review} />
+          ))}
         </div>
       </div>
     </section>

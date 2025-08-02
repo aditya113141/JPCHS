@@ -16,8 +16,8 @@ const Header = () => {
     <header className="site-header">
         <div className="navbar-container">
             <Link to="/" className="logo" onClick={handleLinkClick}>
-                <img src="https://placehold.co/70x70/1e3a8a/fff?text=Logo" alt="Reyansh College Logo" />
-                <span>REYansh COLLEGE OF HOTEL MANAGEMENT</span>
+                <img src="assets/logo.jpeg" alt="Jai Prakash College Of Health Science" />
+                <span>Jai Prakash College Of Health Science</span>
             </Link>
 
             {/* Hamburger Menu Icon - only visible on mobile via CSS */}
