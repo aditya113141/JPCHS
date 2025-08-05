@@ -101,3 +101,26 @@
 .contact-form button:hover {
     background-color: #fbc02d;
 }
+
+@media (max-width: 992px) {
+  .get-in-touch-container {
+    /* This is the key change: stack the grid items in a single column */
+    grid-template-columns: 1fr;
+    gap: 60px; /* Adjust the vertical gap */
+  }
+
+  .contact-heading {
+    /* Make the main heading smaller on tablets */
+    font-size: 2.8rem;
+  }
+}
+
+/* Applies to screens 480px wide or smaller (small mobile phones) */
+@media (max-width: 480px) {
+  .contact-form .form-row {
+    /* Stack the "First Name" and "Last Name" fields on top of each other */
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+  }
+}
