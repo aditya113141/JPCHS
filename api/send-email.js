@@ -2,7 +2,7 @@
 const nodemailer = require('nodemailer');
 const cors = require('cors')({ origin: true });
 
-// This is the main function that Vercel will run
+// Vercel will run
 export default function handler(req, res) {
   // Use CORS middleware to allow requests from your frontend
   cors(req, res, async () => {
@@ -27,7 +27,7 @@ export default function handler(req, res) {
       // Set up email data
       const mailOptions = {
         from: process.env.EMAIL_USER, // Sender address (email1)
-        to: 'amanaditya565@gmail.com', // List of receivers (email2) - REPLACE THIS
+        to: 'amanaditya565@gmail.com', // List of receiver (or many receivers)
         subject: `New Contact Form Submission from ${firstName} ${lastName}`,
         html: `
           <h2>New Message from your Website Contact Form</h2>

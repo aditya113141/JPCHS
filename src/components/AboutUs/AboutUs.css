@@ -15,22 +15,25 @@
   justify-content: center;
   color: #fff;
   text-align: center;
+  padding: 0 20px; /* Add padding to prevent text from touching edges on small screens */
 }
 
 .about-hero h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 3.5rem;
+  /* Use clamp() for fluid font sizes that scale proportionally with the screen width */
+  font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 700;
 }
 
 .about-hero p {
-  font-size: 1.1rem;
+  /* Use clamp() for fluid font sizes */
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-top: 10px;
 }
 
 /* Intro Section */
 .about-intro-section {
-  padding: 80px 20px;
+  padding: 80px 0; /* Use container's padding for left/right space */
 }
 
 .about-intro-grid {
@@ -51,7 +54,8 @@
 
 .about-intro-text .red-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
+  /* Use clamp() for fluid font sizes */
+  font-size: clamp(1.6rem, 4vw, 2rem);
   color: #d32f2f;
   margin-bottom: 20px;
 }
@@ -65,43 +69,37 @@
 
 .about-intro-image img {
   width: 100%;
+  /* This ensures the image scales down while maintaining its aspect ratio */
+  height: auto;
+  display: block; /* Fixes potential small gaps below the image */
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries */
+/* ================================================= */
+/* --- Responsive Styles for Tablets and Mobile --- */
+/* ================================================= */
+
+/* Applies to screens 992px wide or smaller (tablets) */
 @media (max-width: 992px) {
   .about-intro-grid {
-    gap: 30px;
-  }
-
-  .about-hero h1 {
-    font-size: 2.8rem;
-  }
-
-  .about-intro-text .red-title {
-    font-size: 1.6rem;
+    gap: 30px; /* Reduce the space between columns */
   }
 }
 
+/* Applies to screens 768px wide or smaller (mobile phones) */
 @media (max-width: 768px) {
-  .about-hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .about-hero p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
   .about-intro-section {
-    padding: 60px 20px;
+    padding: 60px 0; /* Reduce the top/bottom padding on mobile */
   }
 
+  /* This is the key change: stack the grid items in a single column */
   .about-intro-grid {
     grid-template-columns: 1fr;
+    gap: 40px; /* Adjust vertical gap for stacked items */
   }
 
+  /* This resets the order on mobile so the image is always below the text */
   .about-intro-grid.reverse .about-intro-text,
   .about-intro-grid.reverse .about-intro-image {
     order: initial;

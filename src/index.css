@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
 
-body {
+html, body {
   margin: 0;
   font-family: 'Roboto', 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .section-title {
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 32px;
+  font-size: clamp(1.8rem, 4vw, 2rem);
   font-weight: 600;
   color: #333;
   margin-bottom: 15px;

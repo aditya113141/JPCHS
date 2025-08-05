@@ -94,3 +94,22 @@
 .social-icon.linkedin { background-color: #0077b5; }
 .social-icon.email { background-color: #db4437; }
 .social-icon.youtube { background-color: #ff0000; }
+
+
+/* This applies to screens 768px wide or smaller (mobile phones) */
+@media (max-width: 768px) {
+  .footer-container {
+    /* This is the key change: stack the grid items in a single column */
+    grid-template-columns: 1fr;
+    /* Reduce the vertical gap for a tighter look on mobile */
+    gap: 40px;
+    /* Center the text within each column */
+    text-align: center;
+  }
+
+  /* This centers the menu links and social icons */
+  .footer-column ul a,
+  .social-links {
+    justify-content: center;
+  }
+}
