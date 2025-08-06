@@ -77,3 +77,20 @@
   color: #666;
   line-height: 1.6;
 }
+/* === Global Fix === */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* === Mobile Fixes === */
+@media (max-width: 768px) {
+    .courses-grid {
+        grid-template-columns: 1fr; /* Force 1 column on mobile */
+    }
+
+    .course-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

@@ -13,4 +13,4 @@ const CompaniesBanner = () => {
     );
 };
 
-export default CompaniesBanner; // <-- Make sure this line exists
+export default CompaniesBanner; 

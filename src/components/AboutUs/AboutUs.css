@@ -69,7 +69,6 @@
 
 .about-intro-image img {
   width: 100%;
-  /* This ensures the image scales down while maintaining its aspect ratio */
   height: auto;
   display: block; /* Fixes potential small gaps below the image */
   border-radius: 8px;

@@ -1,4 +1,7 @@
-/* src/components/CoursesPage/CoursesPage.css */
+/* src/components/CoursesPage/CoursesPage.css (Corrected & Fully Responsive) */
+body {
+    overflow-x: hidden;
+}
 
 /* --- Hero Section --- */
 .courses-hero-new {
@@ -10,17 +13,21 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+    text-align: center;
+    padding: 0 20px;
 }
 .courses-hero-new h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     font-weight: 600;
 }
 
 /* --- Specializing Section --- */
 .specializing-section {
-    padding: 80px 20px;
+    padding: 80px 0;
+    overflow-x: hidden; /* prevents horizontal scroll */
 }
+
 .specializing-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,8 +36,8 @@
 }
 .specializing-text h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: #d32f2f; /* Red color */
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #d32f2f;
     margin-bottom: 20px;
 }
 .specializing-text p {
@@ -40,13 +47,21 @@
 }
 .specializing-image img {
     width: 100%;
-    border-radius: 8px;
+    height: auto;
+    display: block;
 }
+.container {
+    width: 100%;
+    max-width: 1200px; /* or your desired max width */
+    margin: 0 auto;
+    padding: 0 15px; /* keep some padding for content */
+    box-sizing: border-box;
+}
+
 
 /* --- Courses Offered Section with Parallax --- */
 .courses-offered-parallax {
-    padding: 100px 0;
-    /* This is the key for the parallax effect */
+    padding: 100px 20px;
     background-image: linear-gradient(rgba(23, 52, 115, 0.85), rgba(23, 52, 115, 0.85)), url('https://placehold.co/1600x800/ccc/777?text=Background');
     background-attachment: fixed;
     background-position: center;
@@ -67,7 +82,6 @@
     display: inline-block;
     margin-bottom: 10px;
 }
-/* Lines beside the subtitle */
 .courses-subtitle::before, .courses-subtitle::after {
     content: '';
     position: absolute;
@@ -78,15 +92,13 @@
 }
 .courses-subtitle::before { right: 100%; margin-right: 15px; }
 .courses-subtitle::after { left: 100%; margin-left: 15px; }
-
 .courses-title-main {
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     font-weight: 600;
     margin-bottom: 60px;
 }
-
 .courses-offered-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,14 +106,14 @@
 }
 .course-offer-card {
     display: flex;
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
     overflow: hidden;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .course-offer-card:hover {
-    transform: translateY(-10px); /* The pop-up effect */
+    transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 .course-offer-image {
@@ -125,7 +137,7 @@
 
 /* --- Placements Section --- */
 .placements-section-courses {
-    padding: 80px 20px;
+    padding: 80px 0;
     text-align: center;
 }
 .section-title.red {
@@ -144,6 +156,7 @@
 }
 .placement-card img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -177,13 +190,47 @@
     background-color: #fff;
     color: #d32f2f;
 }
-/* Responsivesness ----- */
+
 @media (max-width: 992px) {
-    .courses-offered-grid { grid-template-columns: 1fr; }
-    .placements-grid-courses { grid-template-columns: repeat(2, 1fr); }
+    .courses-offered-grid {
+        grid-template-columns: 1fr;
+    }
+    .placements-grid-courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .courses-subtitle::before, .courses-subtitle::after {
+        display: none;
+    }
 }
+
 @media (max-width: 768px) {
-    .specializing-grid { grid-template-columns: 1fr; }
-    .course-offer-card { flex-direction: column; }
-    .course-offer-image { width: 100%; height: 200px; }
+    .specializing-section,
+    .specializing-grid,
+    .specializing-text,
+    .specializing-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .specializing-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 0 16px !important;
+        margin: 0 auto !important;
+    }
+
+    .specializing-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        object-fit: contain !important;
+    }
+
+    body {
+        overflow-x: hidden !important;
+    }
 }

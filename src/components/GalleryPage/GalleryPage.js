@@ -13,7 +13,7 @@ const AnimatedElement = ({ children, animation, delay = '0s' }) => {
 };
 
 const GalleryPage = () => {
-    const eventImages = Array(9).fill('https://placehold.co/400x300/ddd/333?text=JPCHS+Event');
+    const eventImages = Array(9).fill('https://placehold.co/400x300/ddd/333?text=Campus+Event');
     const trainingImages = Array(18).fill('https://placehold.co/400x300/ccc/333?text=Medical+Training');
     const teamImages = [
         { img: 'https://placehold.co/300x300/eee/333?text=Team+1', name: 'Dr. Seema Rathi', title: 'Principal' },
@@ -33,10 +33,10 @@ const GalleryPage = () => {
                 </AnimatedElement>
             </section>
 
-            <section className="why-reyansh-section container">
-                <div className="why-reyansh-grid">
-                    <AnimatedElement animation="fade-in-up" className="why-reyansh-text">
-                        <h2>Why Jai Prakash College of Health Science?</h2>
+            <section className="why-us-section container">
+                <div className="why-us-grid">
+                    <AnimatedElement animation="fade-in-up" className="why-us-text">
+                        <h2>Why Choose Our College?</h2>
                         <ul>
                             <li>Expert-Led Education: Learn from qualified professionals with real-world experience in medical and healthcare fields.</li>
                             <li>State-of-the-Art Labs: Access modern diagnostic and training facilities for enhanced practical learning.</li>
@@ -45,26 +45,26 @@ const GalleryPage = () => {
                         </ul>
                         <a href="#" className="cta-button-red">WHATSAPP US FOR MORE INFO &gt;</a>
                     </AnimatedElement>
-                    <div className="why-reyansh-image-wrapper">
+                    <div className="why-us-image-wrapper">
                         <AnimatedElement animation="slide-in-up">
                             <div className="image-container">
-                                <img src="https://placehold.co/500x600/ddd/333?text=JPCHS+Students" alt="JPCHS Students" />
+                                <img src="https://placehold.co/500x600/ddd/333?text=Our+Students" alt="Our Students" />
                             </div>
                         </AnimatedElement>
                     </div>
                 </div>
             </section>
 
-            <section className="khali-section container">
+            <section className="campus-events-section container">
                 <AnimatedElement animation="fade-in-up">
                     <h3 className="section-pre-title">[ CAMPUS EVENTS ]</h3>
                     <h2 className="section-title-large">CULTURAL & ACADEMIC MOMENTS</h2>
-                    <p className="section-description">Snapshots from our orientation events, seminars, cultural days, and more at JPCHS.</p>
+                    <p className="section-description">Snapshots from our orientation events, seminars, cultural days, and more at the college.</p>
                 </AnimatedElement>
                 <div className="image-grid-nine">
                     {eventImages.map((img, index) => (
                         <AnimatedElement key={index} animation="fade-in-up" delay={`${(index % 3) * 0.1}s`}>
-                            <img src={img} alt={`JPCHS Event ${index + 1}`} />
+                            <img src={img} alt={`Campus Event ${index + 1}`} />
                         </AnimatedElement>
                     ))}
                 </div>
@@ -106,7 +106,7 @@ const GalleryPage = () => {
             <section className="testimonials-gallery-section container">
                 <AnimatedElement animation="fade-in-up">
                     <h2 className="section-title-center">Student Testimonials</h2>
-                    <p className="section-description">Discover real experiences from JPCHS students about how our programs have helped them grow and succeed in the healthcare industry.</p>
+                    <p className="section-description">Discover real experiences from our students about how our programs have helped them grow and succeed in the healthcare industry.</p>
                 </AnimatedElement>
                 <div className="testimonials-grid-gallery">
                     {testimonials.map((item, index) => (
@@ -123,7 +123,7 @@ const GalleryPage = () => {
             <section className="final-cta-section">
                 <div className="container">
                     <AnimatedElement animation="fade-in-up">
-                        <h2>Jai Prakash College Of Health Science</h2>
+                        <h2>Our College Of Health Science</h2>
                         <p>Empowering the Next Generation of Healthcare Professionals</p>
                         <a href="#" className="cta-button-red">GET IN TOUCH WITH US &gt;</a>
                     </AnimatedElement>

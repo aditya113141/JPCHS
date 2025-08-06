@@ -3,7 +3,7 @@
   background-color: var(--white);
 }
 .section.bg-light {
-  background-color: #f9fafb; /* Lighter gray for alternating sections */
+  background-color: #f9fafb; 
 }
 .section-title {
   text-align: center;
