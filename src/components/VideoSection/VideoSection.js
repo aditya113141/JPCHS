@@ -1,3 +1,4 @@
+// VideoSection.js
 import React from 'react';
 import './VideoSection.css';
 
@@ -12,14 +13,26 @@ const VideoCard = ({ thumb }) => (
   </div>
 );
 
-const VideoSection = ({ title, videos, columns }) => {
-  const gridClass = `video-grid video-grid-cols-${columns}`;
+const defaultVideos = [
+  { thumb: 'https://placehold.co/400x250/333/fff?text=Demo+1' },
+  { thumb: 'https://placehold.co/400x250/333/fff?text=Demo+2' },
+  { thumb: 'https://placehold.co/400x250/333/fff?text=Demo+3' },
+  { thumb: 'https://placehold.co/400x250/333/fff?text=Demo+4' },
+  { thumb: 'https://placehold.co/400x250/333/fff?text=Demo+5' },
+  { thumb: 'https://placehold.co/400x250/333/fff?text=Demo+6' },
+];
+
+const VideoSection = ({ title, videos }) => {
+  const finalVideos = videos && videos.length > 0 ? videos : defaultVideos;
+
   return (
     <section className="video-section">
       <div className="container">
         <h2 className="section-title">{title}</h2>
-        <div className={gridClass}>
-          {videos.map((video, index) => <VideoCard key={index} {...video} />)}
+        <div className="video-grid">
+          {finalVideos.map((video, index) => (
+            <VideoCard key={index} {...video} />
+          ))}
         </div>
       </div>
     </section>

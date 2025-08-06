@@ -1,4 +1,3 @@
-/* src/components/CoursesPage/CoursesPage.css (Corrected & Fully Responsive) */
 body {
     overflow-x: hidden;
 }
@@ -25,7 +24,7 @@ body {
 /* --- Specializing Section --- */
 .specializing-section {
     padding: 80px 0;
-    overflow-x: hidden; /* prevents horizontal scroll */
+    overflow-x: hidden;
 }
 
 .specializing-grid {
@@ -52,16 +51,15 @@ body {
 }
 .container {
     width: 100%;
-    max-width: 1200px; /* or your desired max width */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* keep some padding for content */
+    padding: 0 24px;
     box-sizing: border-box;
 }
 
-
 /* --- Courses Offered Section with Parallax --- */
 .courses-offered-parallax {
-    padding: 100px 20px;
+    padding: 100px 0;
     background-image: linear-gradient(rgba(23, 52, 115, 0.85), rgba(23, 52, 115, 0.85)), url('https://placehold.co/1600x800/ccc/777?text=Background');
     background-attachment: fixed;
     background-position: center;
@@ -72,6 +70,8 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .courses-subtitle {
     font-family: 'Poppins', sans-serif;
@@ -82,7 +82,8 @@ body {
     display: inline-block;
     margin-bottom: 10px;
 }
-.courses-subtitle::before, .courses-subtitle::after {
+.courses-subtitle::before,
+.courses-subtitle::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -90,8 +91,14 @@ body {
     height: 1px;
     background-color: #fff;
 }
-.courses-subtitle::before { right: 100%; margin-right: 15px; }
-.courses-subtitle::after { left: 100%; margin-left: 15px; }
+.courses-subtitle::before {
+    right: 100%;
+    margin-right: 15px;
+}
+.courses-subtitle::after {
+    left: 100%;
+    margin-left: 15px;
+}
 .courses-title-main {
     font-family: 'Poppins', sans-serif;
     color: #fff;
@@ -103,6 +110,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 .course-offer-card {
     display: flex;
@@ -114,7 +124,7 @@ body {
 }
 .course-offer-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 .course-offer-image {
     width: 40%;
@@ -135,7 +145,7 @@ body {
     color: #444;
 }
 
-/* --- Placements Section --- */
+/* --- Placements Section (Improved for responsiveness) --- */
 .placements-section-courses {
     padding: 80px 0;
     text-align: center;
@@ -149,11 +159,28 @@ body {
     color: #555;
     font-style: italic;
 }
+
+/* New: Ensure left/right paddings */
 .placements-grid-courses {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
+.placement-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+    padding: 20px 12px 24px 12px;
+    transition: box-shadow 0.2s;
+}
+
+.placement-card:hover {
+    box-shadow: 0 10px 24px rgba(44,62,80,0.15);
+}
+
 .placement-card img {
     width: 100%;
     height: auto;
@@ -191,14 +218,57 @@ body {
     color: #d32f2f;
 }
 
+/* --- Responsive: Placements Section --- */
+@media (max-width: 1200px) {
+    .placements-grid-courses {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .placements-grid-courses {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .placements-section-courses,
+    .placements-grid-courses {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .placements-grid-courses {
+        grid-template-columns: 1fr !important;
+        gap: 18px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* --- Responsive: Other Sections (unchanged) --- */
 @media (max-width: 992px) {
     .courses-offered-grid {
         grid-template-columns: 1fr;
+        padding-left: 15px;
+        padding-right: 15px;
     }
-    .placements-grid-courses {
-        grid-template-columns: repeat(2, 1fr);
+    .course-offer-card {
+        flex-direction: column;
     }
-    .courses-subtitle::before, .courses-subtitle::after {
+    .course-offer-image {
+        width: 100%;
+        height: auto;
+    }
+    .course-offer-text {
+        padding: 20px;
+    }
+    .courses-subtitle::before,
+    .courses-subtitle::after {
         display: none;
     }
 }
@@ -213,15 +283,13 @@ body {
         overflow-x: hidden !important;
         box-sizing: border-box !important;
     }
-
     .specializing-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: stretch !important;
-        padding: 0 16px !important;
+        padding: 0 12px !important;
         margin: 0 auto !important;
     }
-
     .specializing-image img {
         width: 100% !important;
         max-width: 100% !important;
@@ -229,8 +297,29 @@ body {
         display: block !important;
         object-fit: contain !important;
     }
-
     body {
         overflow-x: hidden !important;
     }
+    .courses-offered-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .courses-offered-content {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
+
+/* -- Utility for JS animated elements -- */
+.animated-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.animated-element.is-visible {
+    opacity: 1;
+    transform: none;
+}
+

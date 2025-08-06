@@ -32,30 +32,23 @@ const Home = () => {
             <HeroSlider />
             <WhyJoinUs />
             <AdmissionForm />
-            
+
             {/* Corrected to a self-closing tag */}
-            <VideoSection 
-                title="Incredible Life at JPCHS" 
-                videos={incredibleLifeVideos} 
-                columns={3}
-            />
-            
+            <VideoSection title="Incredible Life at JPCHS" />
+
+
             {/* Corrected to a self-closing tag */}
             <Courses />
-            
+
             {/* Corrected to a self-closing tag */}
-            <VideoSection 
-                title="Placement and Internship Programs" 
-                videos={placementVideos} 
-                columns={3}
-            />
-            
+            <VideoSection title="Placement and Internship Programs" />
+
             {/* Corrected to a self-closing tag */}
             <Campuses />
-            
+
             {/* Corrected to a self-closing tag */}
             <Testimonial />
-            
+
             {/* Corrected to a self-closing tag */}
             <PlacementReviews />
         </>
