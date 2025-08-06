@@ -14,7 +14,7 @@ import ContactPage from './components/ContactPage/ContactPage'; // 1. Import the
 
 function App() {
   return (
-    <Router>
+    <Router basename="/JPCHS"> {/* 3. Set the basename for routing */}
       <div className="App">
         <Header />
         <main>
