@@ -1,5 +1,5 @@
 import React from 'react';
-import './AdmissionForm.css';
+import './AdmissionOpen.css';
 
 const AdmissionForm = () => {
   return (

@@ -1,0 +1,120 @@
+/* Styling for the Apply Online Page */
+.apply-online-page-container {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+
+.main-title-bar {
+    background-color: #eaf2ff;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title-bar h2 {
+    margin: 0;
+    color: #1e3a8a;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.apply-online-form-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.apply-online-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 25px 40px; /* Row and column gap */
+}
+
+.apply-online-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-online-form .full-width {
+    grid-column: 1 / -1; /* Make element span both columns */
+}
+
+.apply-online-form label {
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.apply-online-form input[type="text"],
+.apply-online-form input[type="tel"],
+.apply-online-form input[type="email"],
+.apply-online-form input[type="date"],
+.apply-online-form select,
+.apply-online-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apply-online-form input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.apply-online-form input:focus,
+.apply-online-form select:focus,
+.apply-online-form textarea:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.captcha-group-apply .captcha-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.captcha-group-apply .captcha-code {
+    background-color: #ffc107;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.submit-wrapper {
+    margin-top: 20px;
+}
+
+.submit-wrapper .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-wrapper .submit-btn:hover {
+    background-color: #1c3172;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .apply-online-form {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}

@@ -4,7 +4,7 @@ import React from 'react';
 
 import HeroSlider from '../HeroSlider/HeroSlider';
 import WhyJoinUs from '../WhyJoinUs/WhyJoinUs';
-import AdmissionForm from '../AdmissionForm/AdmissionForm';
+import AdmissionOpen from '../AdmissionOpen/AdmissionOpen';
 import VideoSection from '../VideoSection/VideoSection';
 import Courses from '../Courses/Courses';
 import Campuses from '../Campuses/Campuses';
@@ -31,7 +31,7 @@ const Home = () => {
         <>
             <HeroSlider />
             <WhyJoinUs />
-            <AdmissionForm />
+            <AdmissionOpen />
 
             {/* Corrected to a self-closing tag */}
             <VideoSection title="Incredible Life at JPCHS" />

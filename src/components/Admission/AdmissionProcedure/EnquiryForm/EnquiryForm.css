@@ -1,0 +1,137 @@
+/* Styling for the Enquiry Form Page */
+.enquiry-form-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-title-bar {
+    background-color: #eaf2ff;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title-bar h2 {
+    margin: 0;
+    color: #1e3a8a;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* --- UPDATED --- */
+/* Changed max-width to 100% to fill the container */
+.form-content-wrapper {
+    max-width: 100%; 
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    text-align: left; /* Aligned to the left as per the image */
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.enquiry-form .form-group {
+    margin-bottom: 25px;
+}
+
+.enquiry-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.enquiry-form input[type="text"],
+.enquiry-form input[type="tel"],
+.enquiry-form input[type="email"],
+.enquiry-form select,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.enquiry-form select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: .65em auto;
+    padding-right: 2.5rem;
+}
+
+.captcha-group .captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.captcha-code {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #d9534f; /* Reddish color like the screenshot */
+    text-decoration: line-through;
+}
+
+.refresh-captcha {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+.refresh-captcha:hover {
+    transform: rotate(180deg);
+}
+
+.submit-btn {
+    display: inline-block; /* Changed to inline-block */
+    width: auto; /* Changed to auto */
+    padding: 12px 30px; /* Adjusted padding */
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1c3172;
+    transform: translateY(-2px);
+}

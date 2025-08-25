@@ -1,0 +1,77 @@
+/* Styling for the Admission Procedure Page */
+.admission-procedure-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-title-bar {
+    background-color: #eaf2ff;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title-bar h2 {
+    margin: 0;
+    color: #1e3a8a;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.procedure-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.list-title {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaf2ff;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.document-list {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: document-counter;
+}
+
+.document-list li {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.document-list li::before {
+    counter-increment: document-counter;
+    content: counter(document-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #1e3a8a;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
