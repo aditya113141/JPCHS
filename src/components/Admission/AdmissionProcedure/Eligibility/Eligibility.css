@@ -67,45 +67,54 @@
     background-color: #e9ecef;
 }
 
-/* Responsive design for smaller screens */
+/* --- FINAL POLISHED RESPONSIVE FIX --- */
 @media (max-width: 768px) {
     .eligibility-table thead {
-        display: none; /* Hide table head on mobile */
+        display: none;
     }
 
-    .eligibility-table,
-    .eligibility-table tbody,
-    .eligibility-table tr,
-    .eligibility-table td {
+    .eligibility-table, .eligibility-table tbody, .eligibility-table tr, .eligibility-table td {
         display: block;
         width: 100%;
     }
 
     .eligibility-table tr {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         border: 1px solid #ddd;
         border-radius: 5px;
         overflow: hidden;
     }
 
     .eligibility-table td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
+        display: flex;
+        align-items: flex-start; /* Keep alignment to the top */
+        padding: 12px 15px;
         border-bottom: 1px solid #eee;
+        text-align: right;
     }
 
     .eligibility-table td:last-child {
-        border-bottom: 0;
+        border-bottom: none;
     }
 
+    /* The label */
     .eligibility-table td::before {
         content: attr(data-label);
-        position: absolute;
-        left: 15px;
-        width: calc(50% - 30px);
-        text-align: left;
         font-weight: 600;
         color: #1e3a8a;
+        text-align: left;
+        width: 40%;
+        flex-shrink: 0;
+        /* Match the line-height of the data for perfect alignment */
+        line-height: 1.5;
+    }
+
+    /* The data content (wrapped in a span) */
+    .eligibility-table td span {
+        width: 60%;
+        word-break: break-word;
+        padding-left: 10px;
+        /* Set a consistent line-height for better wrapping visuals */
+        line-height: 1.5;
     }
 }
