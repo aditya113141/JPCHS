@@ -17,6 +17,7 @@ import AdmissionForm from './components/Admission/AdmissionProcedure/AdmissionFo
 import EnquiryForm from './components/Admission/AdmissionProcedure/EnquiryForm/EnquiryForm';
 import ApplyOnline from './components/Admission/AdmissionProcedure/ApplyOnline/ApplyOnline'
 import Eligibility from './components/Admission/AdmissionProcedure/Eligibility/Eligibility';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             <Route path="/enquiry-form" element={<EnquiryForm />} />
             <Route path="/apply-online" element={<ApplyOnline />} />
             <Route path="/eligibility" element={<Eligibility />} />
+
+            <Route path="/registration" element={<RegistrationForm />} />
+            
 
           </Routes>
         </main>

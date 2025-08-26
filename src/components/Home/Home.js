@@ -1,4 +1,4 @@
-// src/components/Home/Home.js - CORRECTED JSX SYNTAX
+// src/components/Home/Home.js
 
 import React from 'react';
 
@@ -10,21 +10,20 @@ import Courses from '../Courses/Courses';
 import Campuses from '../Campuses/Campuses';
 import Testimonial from '../Testimonial/Testimonial';
 import PlacementReviews from '../PlacementReviews/PlacementReviews';
+import RegistrationForm from '../RegistrationForm/RegistrationForm';
+// 1. Import the new RegistrationPopup component
+import RegistrationPopup from '../RegistrationPopup/RegistrationPopup';
 
 const Home = () => {
+    // Your video data arrays...
     const incredibleLifeVideos = [
         { thumb: 'https://placehold.co/400x250/333/fff?text=Video+1' },
-        { thumb: 'https://placehold.co/400x250/333/fff?text=Video+2' },
-        { thumb: 'https://placehold.co/400x250/333/fff?text=Video+3' },
-        { thumb: 'https://placehold.co/400x250/333/fff?text=Video+4' },
-        { thumb: 'https://placehold.co/400x250/333/fff?text=Video+5' },
-        { thumb: 'https://placehold.co/400x250/333/fff?text=Video+6' },
+        // ... other videos
     ];
 
     const placementVideos = [
         { thumb: 'https://placehold.co/400x250/555/fff?text=Placement+1' },
-        { thumb: 'https://placehold.co/400x250/555/fff?text=Placement+2' },
-        { thumb: 'https://placehold.co/400x250/555/fff?text=Placement+3' },
+        // ... other videos
     ];
 
     return (
@@ -32,25 +31,15 @@ const Home = () => {
             <HeroSlider />
             <WhyJoinUs />
             <AdmissionOpen />
-
-            {/* Corrected to a self-closing tag */}
             <VideoSection title="Incredible Life at JPCHS" />
-
-
-            {/* Corrected to a self-closing tag */}
             <Courses />
-
-            {/* Corrected to a self-closing tag */}
             <VideoSection title="Placement and Internship Programs" />
-
-            {/* Corrected to a self-closing tag */}
             <Campuses />
-
-            {/* Corrected to a self-closing tag */}
             <Testimonial />
-
-            {/* Corrected to a self-closing tag */}
             <PlacementReviews />
+            <RegistrationForm />
+            {/* 2. Add the RegistrationPopup component here */}
+            <RegistrationPopup />
         </>
     );
 }
